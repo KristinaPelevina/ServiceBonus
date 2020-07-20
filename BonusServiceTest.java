@@ -64,33 +64,5 @@ class BonusServiceTest {
         assertEquals(expected, actual);
     }
 
-    @Test
-    void shouldCalculateForRegisteredAndZero() {
-        BonusService service = new BonusService();
-
-        // подготавливаем данные:
-        long amount = 00000;
-        boolean registered = false;
-        long expected = 0;
-
-        // вызываем целевой метод:
-        long actual = service.calculate(amount, registered);
-
-        assertEquals(expected, actual);
-    }
-    @Test
-    void shouldCalculateForNotRegisteredAndZero() {
-        BonusService service = new BonusService();
-
-        // подготавливаем данные:
-        long amount = 0000;
-        boolean registered = true;
-        long expected = 0;
-
-        // вызываем целевой метод:
-        long actual = service.calculate(amount, registered);
-
-        assertEquals(expected, actual);
-    }
    }
 
